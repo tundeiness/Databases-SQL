@@ -122,3 +122,30 @@ The query shown misses countries like Bahamas and Belarus because they contain a
 SELECT name
 FROM world
 WHERE name LIKE '%a%' AND name LIKE '%e%' AND name LIKE '%i%' AND name LIKE '%o%' AND name LIKE '%u%' AND name NOT LIKE '% %'
+
+-- select names of countries beginning with U
+
+SELECT name
+FROM world
+WHERE name LIKE 'U%'
+
+--show the population of United Kingdom
+
+SELECT population
+FROM world
+WHERE name = 'United Kingdom'
+
+
+
+--show the name and population of countries in Europe and Asia
+
+SELECT name, population
+FROM world
+WHERE continent IN  ('Europe', 'Asia')
+
+
+--this line of code will yield 2 rows
+
+SELECT name
+FROM world
+WHERE name IN ('Cuba', 'Togo')
