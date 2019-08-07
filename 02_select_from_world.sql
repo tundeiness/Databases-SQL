@@ -60,7 +60,7 @@ FROM world
 WHERE population > 250000000 XOR area > 3000000
 
 
-/*Show the name and population in millions and the GDP in billions for the countries of the continent 'South America'. Use the ROUND function to show the values to two decimal places.
+/*Show the name and population in millions and the GDP in billions for the countries of the continent 'South America'.
 
 For South America show population in millions and GDP in billions both to 2 decimal places.
 */
@@ -80,3 +80,17 @@ Show per-capita GDP for the trillion dollar countries to the nearest $1000.
 SELECT name, ROUND(gdp/population, -3)
 FROM world
 WHERE gdp >= 1000000000000
+
+
+/*
+Greece has capital Athens.
+
+Each of the strings 'Greece', and 'Athens' has 6 characters.
+
+Show the name and capital where the name and the capital have the same number of characters.
+*/
+
+
+SELECT name, capital
+FROM world
+WHERE LENGTH(name) = LENGTH(capital)
