@@ -1,6 +1,5 @@
 
 # visual studio files
-*.user
 *.lib
 *.sbr
 *.xml
