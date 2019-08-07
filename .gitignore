@@ -1,5 +1,6 @@
 
-user
+# visual studio files
+*.user
 *.lib
 *.sbr
 *.xml
@@ -9,9 +10,9 @@ user
 *_p.c
 *_i.c
 *.pch
-*.vscode
 *.vssscc
 *.vspscc
+*.vscode
 *.aps
 *.user
 *.[Oo]bak
