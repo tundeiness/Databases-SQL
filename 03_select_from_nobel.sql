@@ -134,6 +134,7 @@ WHERE yr NOT IN (SELECT DISTINCT yr
                   )
 
 
+--shows the winners whose names starts with "Sir" and year of award starting 196
 
 SELECT subject, winner
 FROM nobel
@@ -161,7 +162,7 @@ WHERE subject = "Medicine" AND yr NOT IN (SELECT yr
                                           FROM nobel
                                           WHERE subject = 'Peace')
 
---count year and group by subject
+--count subject and group by subject
 
 SELECT subject, COUNT(subject)
 FROM nobel
