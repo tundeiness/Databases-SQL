@@ -1,11 +1,8 @@
 # Databases-SQL
-## Project: SQL
 
-This is the final project from 'The Odin Project' curriculum on databases and SQL.
-
--Tutorials 0-9 listed under the “Tutorial Section” completed
+The Tutorials 0-9 listed in SQL zoo was completed
 
 ### Link
-Link to [The Odin Project assignment page](https://www.theodinproject.com/courses/databases/lessons/sql)
+Link to [SQLzoo](https://sqlzoo.net/wiki/SELECT_basics)
 
 
