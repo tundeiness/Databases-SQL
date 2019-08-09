@@ -97,7 +97,32 @@ FROM game JOIN goal ON (game.id = goal.matchid)
 GROUP BY stadium
 
 
-/*
+--For every match involving 'POL', show the matchid, date and the number of
+--goals scored.
 
+SELECT matchid, mdate, COUNT(matchid)
+FROM game JOIN goal ON (game.id = goal.matchid )
+WHERE (team1 = 'POL' OR team2 = 'POL')
+GROUP BY matchid, mdate
+
+/*
+For every match where 'GER' scored, show matchid, match date and the number of goals scored by 'GER'
 */
 
+SELECT matchid, mdate, COUNT(matchid)
+FROM game JOIN goal ON (game.id = goal.matchid )
+WHERE teamid = 'GER'
+GROUP BY mdate, matchid
+
+
+
+
+--List every match with the goals scored by each team as shown.
+
+SELECT game.mdate, game.team1,
+SUM(CASE WHEN goal.teamid = game.team1 THEN 1 ELSE 0 END) AS score1,
+game.team2,
+SUM(CASE WHEN goal.teamid = game.team2 THEN 1 ELSE 0 END) AS score2
+FROM game LEFT JOIN goal ON matchid = id
+GROUP BY game.id,game.mdate, game.team1, game.team2
+ORDER BY mdate,matchid,team1,team2
